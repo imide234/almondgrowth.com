@@ -1,41 +1,62 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset
-  xmlns="[sitemaps.org](http://www.sitemaps.org/schemas/sitemap/0.9)"
-  xmlns:xhtml="[w3.org](http://www.w3.org/1999/xhtml)">
+  xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+  xmlns:xhtml="http://www.w3.org/1999/xhtml">
 
+  <!-- Homepage — CRM & Customer Retention Growth Company -->
   <url>
-    <loc>[almondgrowth.com](https://www.almondgrowth.com/)</loc>
-    <lastmod>2026-05-03</lastmod>
+    <loc>https://www.almondgrowth.com/</loc>
+    <lastmod>2026-05-17</lastmod>
+    <changefreq>monthly</changefreq>
     <priority>1.0</priority>
   </url>
 
+  <!-- The Problem section — customer retention problem -->
   <url>
-    <loc>[almondgrowth.com](https://www.almondgrowth.com/#problem)</loc>
+    <loc>https://www.almondgrowth.com/#problem</loc>
+    <lastmod>2026-05-17</lastmod>
+    <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
 
+  <!-- What We Do — CRM systems, WhatsApp marketing, lifecycle marketing -->
   <url>
-    <loc>[almondgrowth.com](https://www.almondgrowth.com/#solution)</loc>
-    <priority>0.8</priority>
+    <loc>https://www.almondgrowth.com/#solution</loc>
+    <lastmod>2026-05-17</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
   </url>
 
+  <!-- How It Works — 5-step retention system -->
   <url>
-    <loc>[almondgrowth.com](https://www.almondgrowth.com/#process)</loc>
+    <loc>https://www.almondgrowth.com/#process</loc>
+    <lastmod>2026-05-17</lastmod>
+    <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
 
+  <!-- Who We Serve — telecom, fashion, retail, service businesses -->
   <url>
-    <loc>[almondgrowth.com](https://www.almondgrowth.com/#industries)</loc>
+    <loc>https://www.almondgrowth.com/#industries</loc>
+    <lastmod>2026-05-17</lastmod>
+    <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
 
+  <!-- Our Story — Almond Growth, Imide Victor, IVD Marketing Enterprise -->
   <url>
-    <loc>[almondgrowth.com](https://www.almondgrowth.com/#story)</loc>
+    <loc>https://www.almondgrowth.com/#story</loc>
+    <lastmod>2026-05-17</lastmod>
+    <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
 
+  <!-- Book a Free Retention Audit — sign-up / get started -->
   <url>
-    <loc>[almondgrowth.com](https://www.almondgrowth.com/#signup)</loc>
+    <loc>https://www.almondgrowth.com/#signup</loc>
+    <lastmod>2026-05-17</lastmod>
+    <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
+
 </urlset>
