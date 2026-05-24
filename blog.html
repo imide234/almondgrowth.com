@@ -1,255 +1,686 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Almond Growth Blog — Expert insights on customer retention, CRM systems, WhatsApp marketing, and fixing broken sales funnels for small businesses in Nigeria and Africa." />
+  <meta name="keywords" content="customer retention Nigeria, CRM small business, WhatsApp marketing Nigeria, sales funnel mistakes, digital marketing Africa, Almond Growth blog" />
+  <meta name="robots" content="index, follow" />
+  <title>Blog — Almond Growth | Customer Retention & CRM Insights</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;0,900;1,700&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet" />
+<style>
+/* ===== RESET ===== */
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:'DM Sans',system-ui,sans-serif;font-size:16px;line-height:1.7;color:#0D1B2E;background:#fff;overflow-x:hidden}
+img{max-width:100%;display:block}
+a{color:inherit;text-decoration:none}
+ul{list-style:none}
 
-  <!-- Primary SEO -->
-  <title>Modern Recruitment Case Study | IVD Marketing Enterprise & Flowmingo AI</title>
-  <meta name="description" content="Case study on how IVD Marketing Enterprise modernizes hiring using Flowmingo AI interviewing to scale recruitment, improve candidate quality, and reduce hiring costs.">
-  <meta name="keywords" content="IVD Marketing Enterprise, Flowmingo AI, AI interviewing, recruitment automation, digital marketing agency hiring, AI hiring tools">
-  <meta name="author" content="IVD Marketing Enterprise">
+/* ===== VARIABLES ===== */
+:root{
+  --navy:#0D1B2E;
+  --navy-mid:#14253D;
+  --navy-light:#1C3150;
+  --navy-pale:#EEF2F7;
+  --navy-muted:#F4F7FA;
+  --green:#2D6A1F;
+  --green-mid:#3E8A28;
+  --green-bright:#5DB82E;
+  --green-pale:#EBF5E4;
+  --gold:#C8A020;
+  --gold-light:#E8BE3A;
+  --white:#fff;
+  --text:#0D1B2E;
+  --text-muted:#3D5270;
+  --text-light:#6B829E;
+  --border:rgba(13,27,46,0.12);
+  --shadow:0 4px 32px rgba(13,27,46,0.10);
+  --shadow-lg:0 12px 60px rgba(13,27,46,0.18);
+  --radius:12px;
+  --radius-lg:20px;
+  --transition:0.25s cubic-bezier(0.4,0,0.2,1);
+}
 
-  <!-- Open Graph / LinkedIn -->
-  <meta property="og:title" content="How IVD Marketing Enterprise Is Modernizing Hiring Through AI Interviewing">
-  <meta property="og:description" content="Discover how IVD Marketing Enterprise uses Flowmingo AI interviewing to standardize hiring, scale multilingual recruitment, and improve candidate evaluation.">
-  <meta property="og:type" content="article">
-  <meta property="og:url" content="https://imide234.github.io/ivdmarketingenterprisesite.com/">
-  <meta property="og:image" content="Flowmingo Verified Badge.png">
+/* ===== UTILITIES ===== */
+.container{max-width:1160px;margin:0 auto;padding:0 24px}
 
-  <style>
-    body {
-      margin: 0;
-      font-family: Arial, Helvetica, sans-serif;
-      background: #0f0f0f;
-      color: #f1f1f1;
-      line-height: 1.8;
-    }
+.btn{display:inline-flex;align-items:center;gap:8px;padding:14px 28px;border-radius:8px;font-family:'DM Sans',sans-serif;font-size:15px;font-weight:600;cursor:pointer;transition:var(--transition);border:2px solid transparent;white-space:nowrap}
+.btn--primary{background:linear-gradient(135deg,var(--green) 0%,var(--green-bright) 100%);color:#fff;border-color:transparent}
+.btn--primary:hover{opacity:0.9;transform:translateY(-2px);box-shadow:0 8px 28px rgba(61,138,40,0.35)}
 
-    a {
-      color: #32cd32;
-      text-decoration: none;
-    }
+/* ===== NAVBAR ===== */
+.nav{position:fixed;top:0;left:0;right:0;z-index:100;background:rgba(13,27,46,0.97);backdrop-filter:blur(12px);border-bottom:1px solid rgba(255,255,255,0.08)}
+.nav__inner{display:flex;align-items:center;justify-content:space-between;height:68px}
+.nav__logo{display:flex;align-items:center;gap:10px;font-size:18px;font-weight:400;color:#fff}
+.logo-mark{width:36px;height:36px;background:linear-gradient(135deg,var(--green),var(--green-bright));color:#fff;border-radius:8px;display:flex;align-items:center;justify-content:center;font-weight:700;font-size:18px;font-family:'Playfair Display',serif;flex-shrink:0}
+.logo-text{color:#fff}
+.logo-text strong{font-weight:700;background:linear-gradient(135deg,var(--green-mid),var(--green-bright));-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
+.nav__links{display:flex;align-items:center;gap:4px}
+.nav__links a{font-size:14px;font-weight:500;color:rgba(255,255,255,0.7);padding:6px 10px;border-radius:6px;transition:var(--transition)}
+.nav__links a:hover{color:#fff;background:rgba(255,255,255,0.08)}
+.nav__cta{background:linear-gradient(135deg,var(--green),var(--green-bright)) !important;color:#fff !important;padding:8px 18px !important;border-radius:8px !important}
+.nav__burger{display:none;flex-direction:column;gap:5px;background:none;border:none;cursor:pointer;padding:6px}
+.nav__burger span{display:block;width:24px;height:2px;background:#fff;border-radius:2px;transition:var(--transition)}
+.nav__mobile{display:none;flex-direction:column;padding:16px 24px 24px;border-top:1px solid rgba(255,255,255,0.08);background:var(--navy)}
+.nav__mobile a{padding:12px 0;font-size:16px;font-weight:500;color:rgba(255,255,255,0.7);border-bottom:1px solid rgba(255,255,255,0.07)}
+.nav__mobile a:last-child{border-bottom:none}
+.nav__mobile.open{display:flex}
+.nav__cta-mobile{margin-top:12px;padding:14px !important;text-align:center;background:linear-gradient(135deg,var(--green),var(--green-bright));color:#fff !important;border-radius:8px;font-weight:600 !important}
 
-    img {
-      max-width: 100%;
-      height: auto;
-      display: block;
-    }
+/* ===== BLOG HERO ===== */
+.blog-hero{padding:140px 0 80px;background:var(--navy);position:relative;overflow:hidden;color:#fff}
+.blog-hero__bg{position:absolute;inset:0;background:radial-gradient(ellipse at 80% 20%,rgba(93,184,46,0.10) 0%,transparent 55%),radial-gradient(ellipse at 10% 80%,rgba(200,160,32,0.07) 0%,transparent 50%);pointer-events:none}
+.blog-hero__inner{position:relative;z-index:1;text-align:center}
+.blog-hero__title{font-family:'Playfair Display',serif;font-size:clamp(36px,5vw,62px);font-weight:900;color:#fff;line-height:1.1;margin:16px 0 20px}
+.blog-hero__sub{font-size:18px;color:rgba(255,255,255,0.65);max-width:580px;margin:0 auto 36px;line-height:1.7}
+.blog-hero__tags{display:flex;flex-wrap:wrap;justify-content:center;gap:10px}
+.section__label{display:inline-block;font-size:12px;font-weight:600;letter-spacing:.12em;text-transform:uppercase;padding:5px 14px;border-radius:40px;margin-bottom:16px}
+.section__label--light{color:var(--gold-light);background:rgba(200,160,32,0.15);border:1px solid rgba(200,160,32,0.3)}
 
-    .hero {
-      background: linear-gradient(rgba(0,0,0,0.75), rgba(0,0,0,0.75)),
-      url('https://images.unsplash.com/photo-1551434678-e076c223a692');
-      background-size: cover;
-      background-position: center;
-      text-align: center;
-      padding: 100px 20px;
-      border-bottom: 2px solid #32cd32;
-    }
+/* ===== FILTER TAGS ===== */
+.tag-btn{padding:8px 18px;border-radius:40px;font-family:'DM Sans',sans-serif;font-size:13px;font-weight:600;cursor:pointer;border:1px solid rgba(255,255,255,0.18);background:rgba(255,255,255,0.06);color:rgba(255,255,255,0.65);transition:var(--transition)}
+.tag-btn:hover,.tag-btn.active{background:var(--green);border-color:var(--green);color:#fff;box-shadow:0 4px 16px rgba(61,138,40,0.35)}
 
-    .hero h1 {
-      font-size: 46px;
-      color: #32cd32;
-      margin-bottom: 10px;
-    }
+/* ===== ARTICLE TAGS ===== */
+.art-tag{display:inline-block;font-size:11px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;padding:3px 10px;border-radius:20px}
+.art-tag--retention{background:rgba(93,184,46,0.12);color:var(--green);border:1px solid rgba(61,138,40,0.2)}
+.art-tag--crm{background:rgba(13,27,46,0.08);color:var(--navy-mid);border:1px solid rgba(13,27,46,0.15)}
+.art-tag--whatsapp{background:rgba(37,211,102,0.12);color:#1da851;border:1px solid rgba(37,211,102,0.25)}
+.art-tag--funnel{background:rgba(200,160,32,0.12);color:var(--gold);border:1px solid rgba(200,160,32,0.25)}
+.art-tag--digital{background:rgba(93,184,46,0.1);color:var(--green-mid);border:1px solid rgba(61,138,40,0.2)}
+.art-date{font-size:13px;color:var(--text-light)}
 
-    .hero p {
-      max-width: 720px;
-      margin: 20px auto;
-      font-size: 18px;
-      color: #e0e0e0;
-    }
+/* ===== FEATURED CARD ===== */
+.blog-featured{padding:60px 0 0;background:var(--navy-muted)}
+.featured-card{background:#fff;border:1px solid var(--border);border-left:5px solid var(--green-bright);border-radius:var(--radius-lg);padding:48px;cursor:pointer;position:relative;overflow:hidden;transition:var(--transition);display:flex;gap:32px;align-items:flex-start}
+.featured-card:hover{box-shadow:var(--shadow-lg);transform:translateY(-3px);border-left-color:var(--gold)}
+.featured-card__badge{display:inline-block;font-size:12px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:var(--gold);background:rgba(200,160,32,0.1);border:1px solid rgba(200,160,32,0.3);padding:4px 12px;border-radius:20px;margin-bottom:16px}
+.featured-card__body{flex:1}
+.featured-card__meta{display:flex;align-items:center;gap:12px;margin-bottom:16px;flex-wrap:wrap}
+.featured-card h2{font-family:'Playfair Display',serif;font-size:clamp(22px,3vw,34px);font-weight:700;color:var(--navy);line-height:1.25;margin-bottom:16px}
+.featured-card p{font-size:16px;color:var(--text-muted);line-height:1.75;margin-bottom:24px;max-width:720px}
+.read-more-btn{display:inline-flex;align-items:center;gap:6px;font-size:15px;font-weight:600;color:var(--green);transition:var(--transition)}
+.featured-card:hover .read-more-btn{color:var(--green-bright)}
+.featured-card__number{font-family:'Playfair Display',serif;font-size:120px;font-weight:900;color:rgba(13,27,46,0.04);line-height:1;flex-shrink:0;align-self:center;user-select:none}
 
-    .container {
-      max-width: 900px;
-      margin: auto;
-      padding: 50px 20px;
-    }
+/* ===== BLOG GRID ===== */
+.blog-grid-section{padding:48px 0 80px;background:var(--navy-muted)}
+.blog-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(320px,1fr));gap:28px}
+.blog-card{background:#fff;border:1px solid var(--border);border-radius:var(--radius-lg);padding:36px 32px;cursor:pointer;transition:var(--transition);position:relative;display:flex;flex-direction:column}
+.blog-card:hover{transform:translateY(-5px);box-shadow:var(--shadow-lg);border-color:rgba(61,138,40,0.3)}
+.blog-card::after{content:'';position:absolute;bottom:0;left:0;right:0;height:3px;background:linear-gradient(90deg,var(--green),var(--green-bright));border-radius:0 0 var(--radius-lg) var(--radius-lg);opacity:0;transition:var(--transition)}
+.blog-card:hover::after{opacity:1}
+.blog-card__icon{font-size:36px;margin-bottom:16px}
+.blog-card__meta{display:flex;align-items:center;gap:10px;margin-bottom:14px;flex-wrap:wrap}
+.blog-card h3{font-family:'Playfair Display',serif;font-size:19px;font-weight:700;color:var(--navy);line-height:1.35;margin-bottom:14px}
+.blog-card p{font-size:14px;color:var(--text-muted);line-height:1.7;margin-bottom:20px;flex:1}
+.read-more-link{font-size:14px;font-weight:600;color:var(--green);transition:var(--transition);align-self:flex-start}
+.blog-card:hover .read-more-link{color:var(--green-bright);text-decoration:underline}
+.blog-card.hidden{display:none}
+.blog-featured.hidden-section{display:none}
 
-    h2 {
-      color: #32cd32;
-      margin-top: 50px;
-      font-size: 30px;
-    }
+/* ===== CTA STRIP ===== */
+.blog-cta-strip{background:linear-gradient(135deg,var(--navy) 0%,#0A2010 100%);padding:64px 0}
+.blog-cta-strip__inner{display:flex;align-items:center;justify-content:space-between;gap:32px;flex-wrap:wrap}
+.blog-cta-strip__inner h3{font-family:'Playfair Display',serif;font-size:26px;color:#fff;margin-bottom:8px}
+.blog-cta-strip__inner p{font-size:16px;color:rgba(255,255,255,0.65)}
 
-    h3 {
-      color: #32cd32;
-      margin-top: 30px;
-      font-size: 22px;
-    }
+/* ===== ARTICLE OVERLAY ===== */
+.article-overlay{display:none;position:fixed;inset:0;z-index:200;background:rgba(13,27,46,0.88);backdrop-filter:blur(6px);overflow-y:auto;padding:32px 16px 60px}
+.article-overlay.open{display:flex;align-items:flex-start;justify-content:center}
+.article-modal{background:#fff;border-radius:var(--radius-lg);max-width:820px;width:100%;padding:52px 56px;position:relative;margin-top:20px;animation:modalSlide .35s cubic-bezier(.34,1.56,.64,1)}
+@keyframes modalSlide{from{opacity:0;transform:translateY(40px) scale(.97)}to{opacity:1;transform:translateY(0) scale(1)}}
+.article-close{position:sticky;top:0;float:right;display:flex;align-items:center;gap:6px;font-size:13px;font-weight:600;color:var(--text-light);background:var(--navy-pale);border:1px solid var(--border);border-radius:20px;padding:6px 14px;cursor:pointer;transition:var(--transition);font-family:'DM Sans',sans-serif;margin-bottom:32px;z-index:2}
+.article-close:hover{background:var(--navy);color:#fff;border-color:var(--navy)}
+.article-content{clear:both}
+.article-meta{display:flex;align-items:center;gap:12px;margin-bottom:20px;flex-wrap:wrap}
+.article-content h1{font-family:'Playfair Display',serif;font-size:clamp(26px,3.5vw,40px);font-weight:700;color:var(--navy);line-height:1.2;margin-bottom:24px}
+.article-intro{font-size:18px !important;color:var(--text-muted) !important;border-left:4px solid var(--green-bright);padding-left:20px !important;margin-bottom:36px !important;line-height:1.75 !important;font-style:italic}
+.article-content h2{font-family:'Playfair Display',serif;font-size:24px;font-weight:700;color:var(--navy);margin:40px 0 14px;padding-bottom:10px;border-bottom:2px solid var(--green-pale)}
+.article-content h3{font-family:'Playfair Display',serif;font-size:19px;font-weight:700;color:var(--navy-mid);margin:28px 0 10px}
+.article-content p{font-size:16px;color:var(--text-muted);line-height:1.85;margin-bottom:18px}
+.article-callout{background:var(--navy-pale);border-left:4px solid var(--navy-light);border-radius:0 var(--radius) var(--radius) 0;padding:20px 24px;margin:28px 0;font-size:15px;color:var(--text-muted);line-height:1.7}
+.article-callout--green{background:var(--green-pale);border-left-color:var(--green-bright)}
+.article-list{padding:0;margin:8px 0 20px}
+.article-list li{font-size:15px;color:var(--text-muted);padding:8px 0 8px 24px;border-bottom:1px solid var(--border);position:relative;line-height:1.6}
+.article-list li:last-child{border-bottom:none}
+.article-list li::before{content:'→';position:absolute;left:0;color:var(--green-bright);font-weight:700}
+.article-cta{background:linear-gradient(135deg,var(--navy) 0%,#0A2010 100%);border-radius:var(--radius-lg);padding:36px;margin-top:48px;text-align:center;color:#fff}
+.article-cta h3{font-family:'Playfair Display',serif;font-size:22px;font-weight:700;color:#fff !important;margin:0 0 10px !important;padding:0 !important;border:none !important}
+.article-cta p{color:rgba(255,255,255,0.7) !important;margin-bottom:24px !important}
 
-    p {
-      font-size: 16px;
-      margin-bottom: 22px;
-    }
+/* ===== FOOTER ===== */
+.footer{background:var(--navy);padding:80px 0 0;border-top:1px solid rgba(255,255,255,0.06)}
+.footer__inner{display:grid;grid-template-columns:1.4fr 2fr;gap:60px;padding-bottom:60px;border-bottom:1px solid rgba(255,255,255,0.07)}
+.footer__brand p{font-size:14px;color:rgba(255,255,255,0.45);line-height:1.7;margin-top:12px}
+.footer__links{display:grid;grid-template-columns:repeat(3,1fr);gap:32px}
+.footer__col h4{font-size:11px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--green-bright);margin-bottom:16px}
+.footer__col a{display:block;font-size:14px;color:rgba(255,255,255,0.45);padding:4px 0;transition:var(--transition)}
+.footer__col a:hover{color:#fff}
+.footer__bottom{text-align:center;padding:24px}
+.footer__bottom p{font-size:13px;color:rgba(255,255,255,0.25)}
 
-    ul {
-      padding-left: 22px;
-      margin-bottom: 25px;
-    }
+/* ===== REVEAL ANIMATION ===== */
+.reveal{opacity:0;transform:translateY(32px);transition:opacity .6s ease,transform .6s ease}
+.reveal.visible{opacity:1;transform:translateY(0)}
+.fade-in{opacity:0;transform:translateY(24px);animation:fadeUp .7s ease forwards}
+.delay-1{animation-delay:.1s}
+.delay-2{animation-delay:.25s}
+@keyframes fadeUp{to{opacity:1;transform:translateY(0)}}
 
-    li {
-      margin-bottom: 10px;
-    }
-
-    .image-box {
-      margin: 40px 0;
-      border-radius: 14px;
-      overflow: hidden;
-    }
-
-    .cta-box {
-      background: #121212;
-      padding: 35px;
-      border-left: 5px solid #32cd32;
-      border-radius: 12px;
-      margin-top: 60px;
-    }
-
-    .cta-button {
-      display: inline-block;
-      margin-top: 20px;
-      padding: 14px 36px;
-      background: #32cd32;
-      color: #000;
-      font-weight: bold;
-      border-radius: 30px;
-    }
-
-    footer {
-      margin-top: 70px;
-      padding: 35px;
-      background: #111;
-      text-align: center;
-    }
-
-    footer p {
-      font-size: 14px;
-      color: #aaa;
-    }
-
-    @media (max-width: 600px) {
-      .hero h1 { font-size: 34px; }
-      h2 { font-size: 24px; }
-    }
-  </style>
+/* ===== RESPONSIVE ===== */
+@media(max-width:900px){
+  .nav__links{display:none}
+  .nav__burger{display:flex}
+  .footer__inner{grid-template-columns:1fr;gap:40px}
+}
+@media(max-width:768px){
+  .article-modal{padding:32px 20px}
+  .featured-card{flex-direction:column;padding:32px 24px}
+  .featured-card__number{display:none}
+  .blog-cta-strip__inner{flex-direction:column;text-align:center}
+  .blog-grid{grid-template-columns:1fr}
+  .footer__links{grid-template-columns:1fr}
+}
+</style>
 </head>
 <body>
 
-<!-- HERO -->
-<div class="hero">
-  <h1>Modern Recruitment, Reimagined</h1>
-  <p>How IVD Marketing Enterprise Is Modernizing Hiring Through AI Interviewing</p>
-
-  <a href="https://flowmingo.ai/?utm_source=IVDMarketing-Partnership" target="_blank">
-    <div class="image-box">
-      <img src="11 flow.png" alt="Every rejection email is a branding moment">
-    </div>
-  </a>
-</div>
-
-<!-- CONTENT -->
-<div class="container">
-
-  <p>
-    <strong>IVD Marketing Enterprise</strong> is using Flowmingo’s AI interviewing platform to standardize hiring, evaluate communication and reasoning skills earlier, and scale multilingual recruitment—without adding extra recruiter headcount.
-  </p>
-
-  <p>
-    Marketing agencies today face an unusual challenge: scaling talent faster than traditional hiring workflows can support. As campaigns expand across markets, channels, and data-driven strategies, agencies need hiring systems that move just as fast.
-  </p>
-
-  <p>
-    To support this shift, IVD Marketing Enterprise integrated <strong>Flowmingo</strong>—an AI interviewer platform—into its recruitment workflow, aligning with broader trends in modern marketing talent acquisition.
-  </p>
-
-  <h2>1. IVD’s Talent Needs Are Expanding With Service Scope</h2>
-  <p>As IVD’s services expand across multiple disciplines, traditional manual hiring workflows begin to break.</p>
-
-  <ul>
-    <li>Content production</li>
-    <li>SEO operations</li>
-    <li>Performance marketing</li>
-    <li>Web development</li>
-    <li>Multi-channel digital services</li>
-  </ul>
-
-  <p>
-    These roles demand strong communication, analytical reasoning, creative adaptability, and cross-disciplinary understanding. Yet early-stage screening often relies on subjective CV reviews and unstructured interviews—making consistent evaluation difficult.
-  </p>
-
-  <p>
-    Flowmingo transformed this process by making AI interviewing a core screening layer for identifying top talent early.
-  </p>
-
-  <h2>2. Why AI Interviewing Fits Naturally Into IVD’s Hiring Model</h2>
-  <p>As agencies scale, three requirements remain constant:</p>
-
-  <ul>
-    <li>Standardized candidate evaluation</li>
-    <li>Efficient early-stage screening</li>
-    <li>Multilingual recruitment across regions</li>
-  </ul>
-
-  <p>Flowmingo supports these needs with:</p>
-
-  <ul>
-    <li>AI-driven questions aligned with each CV</li>
-    <li>Structured scoring and communication indicators</li>
-    <li>Multilingual interviews in 60+ languages</li>
-    <li>Cheating and inconsistency detection</li>
-    <li>Clear, manager-ready interview reports</li>
-  </ul>
-
-  <a href="https://flowmingo.ai/?utm_source=IVDMarketing-Partnership" target="_blank">
-    <div class="image-box">
-      <img src="WhatsApp Image 2025-12-11 at 13.49.27.jpeg" alt="Why We Built Flowmingo">
-    </div>
-  </a>
-
-  <h3>Why Flowmingo Wins on Cost & Accessibility</h3>
-  <p>
-    Unlike enterprise hiring platforms with five-figure contracts, Flowmingo offers free core AI interviewing with no setup fees or usage caps—making modern hiring accessible to agencies of any size.
-  </p>
-
-  <h2>3. The Partnership Reflects a Larger Shift in Agency Operations</h2>
-  <p>
-    Agencies across APAC, EMEA, and LATAM are adopting AI interviewers to handle rising applicant volume, cross-border hiring, and the need for standardized assessment.
-  </p>
-
-  <h2>4. Early Observations From the Integration</h2>
-  <ul>
-    <li>Clearer signals before live interviews</li>
-    <li>More efficient use of hiring time</li>
-    <li>Greater consistency across interviewers</li>
-  </ul>
-
-  <p>
-    These outcomes align with HR research showing structured AI screening can reduce early-stage evaluation time by 30–50%.
-  </p>
-
-  <div class="cta-box">
-    <p><strong>Experience AI Hiring With Flowmingo</strong></p>
-    <a class="cta-button" href="https://flowmingo.ai/?utm_source=IVDMarketing-Partnership" target="_blank">
-      Try Flowmingo — Free Forever
+<!-- NAV -->
+<header class="nav" id="nav">
+  <div class="nav__inner container">
+    <a href="index.html" class="nav__logo">
+      <span class="logo-mark">A</span>
+      <span class="logo-text">Almond<strong>Growth</strong></span>
     </a>
+    <nav class="nav__links">
+      <a href="index.html#problem">The Problem</a>
+      <a href="index.html#solution">What We Do</a>
+      <a href="index.html#process">How It Works</a>
+      <a href="index.html#industries">Who We Serve</a>
+      <a href="blog.html" style="color:#5DB82E;font-weight:700;">Blog</a>
+      <a href="index.html#story">Our Story</a>
+      <a href="index.html#signup" class="nav__cta">Book Free Audit →</a>
+    </nav>
+    <button class="nav__burger" id="burger" aria-label="Toggle menu">
+      <span></span><span></span><span></span>
+    </button>
   </div>
+  <div class="nav__mobile" id="mobileMenu">
+    <a href="index.html#problem">The Problem</a>
+    <a href="index.html#solution">What We Do</a>
+    <a href="index.html#process">How It Works</a>
+    <a href="index.html#industries">Who We Serve</a>
+    <a href="blog.html" style="color:#5DB82E;font-weight:700;">Blog</a>
+    <a href="index.html#story">Our Story</a>
+    <a href="index.html#signup" class="nav__cta-mobile">Book Free Audit →</a>
+  </div>
+</header>
 
-</div>
-
-<section class="container" style="margin-top:80px;">
-  <h3>About the Partnership</h3>
-  <p>
-    This case study reflects an ongoing collaboration between 
-    <strong>IVD Marketing Enterprise</strong> and 
-    <strong>Flowmingo AI</strong>, focused on modernizing recruitment
-    through accessible AI interviewing technology.
-  </p>
+<!-- BLOG HERO -->
+<section class="blog-hero">
+  <div class="blog-hero__bg"></div>
+  <div class="container blog-hero__inner">
+    <span class="section__label section__label--light">Insights & Strategies</span>
+    <h1 class="blog-hero__title fade-in">The Almond Growth Blog</h1>
+    <p class="blog-hero__sub fade-in delay-1">Real, no-fluff strategies for small businesses ready to stop losing customers — and start building systems that keep them coming back.</p>
+    <div class="blog-hero__tags fade-in delay-2">
+      <button class="tag-btn active" data-filter="all">All Articles</button>
+      <button class="tag-btn" data-filter="retention">Customer Retention</button>
+      <button class="tag-btn" data-filter="crm">CRM Systems</button>
+      <button class="tag-btn" data-filter="whatsapp">WhatsApp Marketing</button>
+      <button class="tag-btn" data-filter="funnel">Sales Funnels</button>
+      <button class="tag-btn" data-filter="digital">Digital Marketing</button>
+    </div>
+  </div>
 </section>
 
-<footer>
-  <p>© 2025 IVD Marketing Enterprise — All Rights Reserved.</p>
+<!-- FEATURED ARTICLE -->
+<section class="blog-featured" id="featuredSection">
+  <div class="container">
+    <div class="featured-card reveal" data-category="retention" onclick="showArticle('article1')">
+      <div class="featured-card__body">
+        <div class="featured-card__badge">⭐ Featured Article</div>
+        <div class="featured-card__meta">
+          <span class="art-tag art-tag--retention">Customer Retention</span>
+          <span class="art-date">May 2026 · 8 min read</span>
+        </div>
+        <h2>Why Small Businesses Struggle With Customer Retention — And What Most Owners Never Realise</h2>
+        <p>You ran the ads. You made the sale. The customer walked away happy. And then... silence. They never came back. If this sounds familiar, you are not alone — and you are not failing because your product is bad. You are failing because nobody taught you that getting customers is only half the job.</p>
+        <span class="read-more-btn">Read Full Article →</span>
+      </div>
+      <div class="featured-card__number">01</div>
+    </div>
+  </div>
+</section>
+
+<!-- BLOG GRID -->
+<section class="blog-grid-section">
+  <div class="container">
+    <div class="blog-grid" id="blogGrid">
+
+      <article class="blog-card reveal" data-category="crm" onclick="showArticle('article2')">
+        <div class="blog-card__icon">🗂️</div>
+        <div class="blog-card__meta">
+          <span class="art-tag art-tag--crm">CRM Systems</span>
+          <span class="art-date">May 2026 · 7 min</span>
+        </div>
+        <h3>How CRM Systems Increase Repeat Customers — The Engine Most Small Businesses Don't Know They're Missing</h3>
+        <p>A CRM is not just software. It is the memory your business never had — one that remembers every customer, every purchase, every conversation, so you never lose a relationship again.</p>
+        <span class="read-more-link">Read Article →</span>
+      </article>
+
+      <article class="blog-card reveal" data-category="retention" onclick="showArticle('article3')">
+        <div class="blog-card__icon">💔</div>
+        <div class="blog-card__meta">
+          <span class="art-tag art-tag--retention">Customer Retention</span>
+          <span class="art-date">May 2026 · 6 min</span>
+        </div>
+        <h3>Why Your Customers Don't Come Back After the First Purchase — The Silent Killer of Small Business Revenue</h3>
+        <p>Most business owners assume customers who don't return simply didn't like the product. The truth is far more painful — and far more fixable. They forgot about you.</p>
+        <span class="read-more-link">Read Article →</span>
+      </article>
+
+      <article class="blog-card reveal" data-category="whatsapp" onclick="showArticle('article4')">
+        <div class="blog-card__icon">💬</div>
+        <div class="blog-card__meta">
+          <span class="art-tag art-tag--whatsapp">WhatsApp Marketing</span>
+          <span class="art-date">May 2026 · 7 min</span>
+        </div>
+        <h3>How WhatsApp Marketing Helps Nigerian Businesses Grow — The Most Underused Growth Tool in Africa</h3>
+        <p>While most businesses are burning money on ads that nobody clicks, smart Nigerian business owners are quietly using WhatsApp to keep customers engaged, coming back, and referring friends.</p>
+        <span class="read-more-link">Read Article →</span>
+      </article>
+
+      <article class="blog-card reveal" data-category="funnel" onclick="showArticle('article5')">
+        <div class="blog-card__icon">🔻</div>
+        <div class="blog-card__meta">
+          <span class="art-tag art-tag--funnel">Sales Funnels</span>
+          <span class="art-date">May 2026 · 8 min</span>
+        </div>
+        <h3>5 Funnel Mistakes Killing Small Business Sales — Is Your Business Making All of Them?</h3>
+        <p>Your funnel is supposed to take a stranger and turn them into a paying customer. But most small business funnels are broken in ways the owner doesn't even know about — leaking revenue at every stage.</p>
+        <span class="read-more-link">Read Article →</span>
+      </article>
+
+      <article class="blog-card reveal" data-category="digital" onclick="showArticle('article6')">
+        <div class="blog-card__icon">📉</div>
+        <div class="blog-card__meta">
+          <span class="art-tag art-tag--digital">Digital Marketing</span>
+          <span class="art-date">May 2026 · 9 min</span>
+        </div>
+        <h3>Why Most Small Businesses Fail at Digital Marketing — And the Costly Mistake They Keep Repeating</h3>
+        <p>Digital marketing looks simple from the outside. Post on Instagram, run some ads, grow your business. But the graveyard of small businesses that tried this and failed is enormous.</p>
+        <span class="read-more-link">Read Article →</span>
+      </article>
+
+    </div>
+  </div>
+</section>
+
+<!-- CTA STRIP -->
+<section class="blog-cta-strip">
+  <div class="container">
+    <div class="blog-cta-strip__inner reveal">
+      <div>
+        <h3>Is your business losing customers right now?</h3>
+        <p>Book a free Retention Audit and find out exactly where — and how to fix it.</p>
+      </div>
+      <a href="index.html#signup" class="btn btn--primary">Book Free Audit →</a>
+    </div>
+  </div>
+</section>
+
+<!-- ===== ARTICLE 1 ===== -->
+<div class="article-overlay" id="article1">
+  <div class="article-modal">
+    <button class="article-close" onclick="closeArticle('article1')">✕ Close</button>
+    <div class="article-content">
+      <div class="article-meta"><span class="art-tag art-tag--retention">Customer Retention</span><span class="art-date">May 2026 · 8 min read</span></div>
+      <h1>Why Small Businesses Struggle With Customer Retention — And What Most Owners Never Realise</h1>
+      <p class="article-intro">You ran the ads. You made the sale. The customer walked away happy. And then... silence. They never came back. If this sounds familiar, you are not alone — and you are not failing because your product is bad. You are failing because nobody taught you that getting customers is only half the job.</p>
+      <h2>The Painful Truth Nobody Tells Small Business Owners</h2>
+      <p>Most business advice is obsessed with one thing: getting new customers. Run ads. Post content. Cold call. Hustle harder. And yes — those things can work. But here is what nobody tells you.</p>
+      <p>Acquiring a new customer costs between <strong>5 to 7 times more</strong> than retaining an existing one. That means every time a customer buys from you once and disappears, you paid a heavy price to win them — and got almost nothing back. Now multiply that by every customer who bought from you in the last 12 months and never returned. That is the real hole in your revenue bucket. Not lack of leads. <em>Lack of retention.</em></p>
+      <div class="article-callout"><strong>💡 Think about this:</strong> If your business has 200 customers and only 20% come back for a second purchase, you are rebuilding your customer base from scratch every single month. That is exhausting — and expensive.</div>
+      <h2>Why Retention Breaks Down: The 5 Real Reasons</h2>
+      <h3>1. No System Exists After the Sale</h3>
+      <p>For most small businesses, the customer journey ends the moment money changes hands. There is no follow-up message. No "how was your experience?" No reminder when they might need you again. The relationship simply stops. And when a relationship stops, so does the loyalty. Customers do not leave because they are disloyal. They leave because they feel forgotten.</p>
+      <h3>2. There Is No CRM — No Memory of the Customer</h3>
+      <p>Ask most small business owners: "Who are your top 20 customers by revenue?" Most cannot answer. Without a system that remembers your customers — their names, purchase history, when they last engaged — every customer relationship starts at zero every time. That is not a relationship. That is a series of cold transactions.</p>
+      <h3>3. The Business Is Built for Acquisition, Not Loyalty</h3>
+      <p>Many small businesses put all their energy into the front end: the ads, the offers, the launch promotions. But the back end — the lifecycle, the follow-up, the repeat purchase journey — is completely ignored. It is like pumping water into a bucket full of holes and wondering why it never fills up.</p>
+      <h3>4. No Emotional Connection Is Built After Purchase</h3>
+      <p>People do not buy products. They buy relationships, identities, and feelings of belonging. The businesses that keep customers for years are not just selling things — they are creating communities. A brief post-purchase WhatsApp message saying "We hope you're loving your new product" creates more loyalty than any discount ever will.</p>
+      <h3>5. Competition Is Ignored</h3>
+      <p>Your competitors are not waiting. The moment your customer leaves, they are being targeted by other businesses. If you are not actively maintaining the relationship, someone else will take it. Retention is not passive. It requires deliberate, consistent effort.</p>
+      <h2>What Good Retention Actually Looks Like</h2>
+      <p>The businesses that master retention share one thing: <strong>they treat the sale as the beginning of the relationship, not the end.</strong> They have a CRM that tracks every customer. They have automated follow-up messages. They have loyalty programmes. They run re-engagement campaigns for customers who have gone quiet. And they measure their repeat purchase rate the same way they measure new sales.</p>
+      <div class="article-callout article-callout--green"><strong>📈 The numbers speak clearly:</strong> Increasing customer retention by just 5% can increase profits by 25–95%. The most profitable growth lever for any small business is already sitting in their existing customer base — untapped.</div>
+      <div class="article-cta">
+        <h3>Ready to stop the leak?</h3>
+        <p>Book your free Retention Audit today. We will show you exactly where your business is losing customers — at no cost.</p>
+        <a href="index.html#signup" class="btn btn--primary">Book My Free Retention Audit →</a>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ===== ARTICLE 2 ===== -->
+<div class="article-overlay" id="article2">
+  <div class="article-modal">
+    <button class="article-close" onclick="closeArticle('article2')">✕ Close</button>
+    <div class="article-content">
+      <div class="article-meta"><span class="art-tag art-tag--crm">CRM Systems</span><span class="art-date">May 2026 · 7 min read</span></div>
+      <h1>How CRM Systems Increase Repeat Customers — The Engine Most Small Businesses Don't Know They're Missing</h1>
+      <p class="article-intro">A CRM is not just software. It is the memory your business never had — one that remembers every customer, every purchase, every conversation, so you never lose a relationship again. And when you stop losing relationships, you stop losing revenue.</p>
+      <h2>What Is a CRM — and Why Should a Small Business Owner Care?</h2>
+      <p>CRM stands for Customer Relationship Management. Strip away the jargon and it means one thing: a system that helps you remember your customers and follow up with them at the right time. Think about the best salesperson you have ever met. They remembered names. They followed up without being told. They knew when a customer was likely to buy again. A CRM gives every business that same superpower — automatically.</p>
+      <div class="article-callout"><strong>📊 Fact:</strong> Businesses that use a CRM system see an average 27% increase in customer retention. For a business generating ₦5 million monthly, that could mean an additional ₦1.35 million — from customers you already have.</div>
+      <h2>How a CRM Increases Repeat Customers — Step by Step</h2>
+      <h3>Step 1: It Captures Every Customer</h3>
+      <p>Without a CRM, customers are ghosts. They buy, they leave, and unless they come back on their own, they are gone forever. A CRM captures every customer's name, contact, purchase history, and preferences. Now they are relationships you can nurture.</p>
+      <h3>Step 2: It Tells You When to Follow Up</h3>
+      <p>Imagine selling body lotion. Your CRM tells you: "Customer A bought 30 days ago. Lotion usually runs out in 30–45 days. Time to reach out." That one automated WhatsApp message — "Hi Adaeze, your lotion should be running out soon — would you like to reorder? 💚" — is worth more than any ad campaign. It is personal, timely, and it works.</p>
+      <h3>Step 3: It Segments Your Customers</h3>
+      <p>Not all customers are the same. Some buy every month. Some buy once and disappear. Some are high spenders. A CRM lets you speak to each group differently — your VIP customers get exclusive offers, your dormant customers get a win-back campaign, your new customers get an onboarding sequence. The right message, to the right person, at the right time.</p>
+      <h3>Step 4: It Automates the Relationship</h3>
+      <p>The biggest lie in business is "I just need to remember to follow up." You will not. Life is busy. A CRM removes human forgetfulness from the equation. Follow-up messages go out automatically. Reminders fire when customers have been quiet too long. The relationship is maintained — even when you are sleeping.</p>
+      <h3>Step 5: It Measures What Actually Matters</h3>
+      <p>What is your current repeat purchase rate? What is your customer lifetime value? Which customers are at risk of churning? Without a CRM these are unanswerable questions. With one, they are your daily dashboard.</p>
+      <h2>Is a CRM Right for Your Business?</h2>
+      <p>If you answer yes to any of these, you need a CRM:</p>
+      <ul class="article-list">
+        <li>You cannot easily name your top 20 customers by revenue</li>
+        <li>Customers bought once and never returned</li>
+        <li>You rely on customers remembering to come back on their own</li>
+        <li>There is no automated follow-up after a purchase</li>
+        <li>You spend more energy chasing new customers than nurturing existing ones</li>
+      </ul>
+      <div class="article-callout article-callout--green"><strong>🚀 The Almond Growth approach:</strong> We do not just install a CRM and hand you a manual. We build the entire retention system around it — follow-up sequences, WhatsApp campaigns, loyalty triggers, re-engagement flows — so your CRM generates repeat revenue from day one.</div>
+      <div class="article-cta">
+        <h3>Want a CRM built specifically for your business?</h3>
+        <p>Book your free Retention Audit and we will show you exactly how a CRM system would transform your customer retention.</p>
+        <a href="index.html#signup" class="btn btn--primary">Book My Free Audit →</a>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ===== ARTICLE 3 ===== -->
+<div class="article-overlay" id="article3">
+  <div class="article-modal">
+    <button class="article-close" onclick="closeArticle('article3')">✕ Close</button>
+    <div class="article-content">
+      <div class="article-meta"><span class="art-tag art-tag--retention">Customer Retention</span><span class="art-date">May 2026 · 6 min read</span></div>
+      <h1>Why Your Customers Don't Come Back After the First Purchase — The Silent Killer of Small Business Revenue</h1>
+      <p class="article-intro">Most business owners assume customers who don't return simply didn't like the product. The truth is far more painful — and far more fixable. In most cases, they forgot about you. And that is entirely on the business to prevent.</p>
+      <h2>The Moment the Sale Ends — and the Problem Begins</h2>
+      <p>A customer finds your business, loves what you offer, makes their first purchase, and leaves satisfied. But without realising it, you have just begun a race against time. Within days, your customer is bombarded with content, ads, and messages from dozens of other businesses. Your brand starts to fade. Within two weeks, unless you have reached out, you are barely a memory.</p>
+      <h2>The 6 Real Reasons Customers Don't Return</h2>
+      <h3>1. You Never Followed Up</h3>
+      <p>The single biggest reason customers do not return is the simplest: nobody reached out. No thank-you message. No check-in. No reminder. No offer. Nothing. When customers feel forgotten, they go somewhere they feel remembered. That somewhere is your competitor.</p>
+      <h3>2. You Made It Too Hard to Come Back</h3>
+      <p>Friction kills repeat purchases. If a customer has to search for your number again or navigate a confusing process, they will not. The path back must be easy, fast, and feel rewarding. A WhatsApp message with a direct link and a returning-customer discount removes almost all friction instantly.</p>
+      <h3>3. There Was No Emotional Afterglow</h3>
+      <p>The period immediately after a purchase is the most powerful emotional window in the customer relationship. The customer is excited. They feel good about their decision. Most businesses miss this window entirely and let the emotional warmth fade into indifference.</p>
+      <h3>4. There Was No Reason to Come Back Sooner</h3>
+      <p>Customers respond to incentives. A well-timed offer — "Come back within 30 days and get 15% off your next order" — gives customers a specific, time-bound reason to return. Without that nudge, "eventually" becomes never.</p>
+      <h3>5. You Didn't Remind Them They Needed You</h3>
+      <p>Some products have natural replenishment cycles. Customers do not always track when they are running low. A simple, well-timed reminder — "Hey, it's been 3 weeks — time for a refill?" — can feel like good service rather than a sales pitch. Because it is.</p>
+      <h3>6. The Experience Didn't Create a Story Worth Sharing</h3>
+      <p>The most powerful retention engine is word-of-mouth. When a customer has an experience so good that they talk about it, they not only come back — they bring others. But most businesses aim for "good enough" rather than "unforgettable." Good enough does not create stories.</p>
+      <div class="article-callout"><strong>💡 The Pattern:</strong> In almost every case where customers don't return, the root cause isn't product quality — it's the absence of a deliberate, systematic post-purchase journey. The business left the relationship to chance. Chance is not a strategy.</div>
+      <h2>The Fix: A Post-Purchase Retention System</h2>
+      <ul class="article-list">
+        <li><strong>Day 1:</strong> Thank-you message + usage tip or delivery confirmation</li>
+        <li><strong>Day 3:</strong> Check-in — "How are you getting on with your product?"</li>
+        <li><strong>Day 7:</strong> Value-add — a helpful tip or relevant recommendation</li>
+        <li><strong>Day 14:</strong> Soft offer — a returning-customer discount or exclusive bundle</li>
+        <li><strong>Day 30:</strong> Replenishment reminder or "We miss you" campaign</li>
+        <li><strong>Day 60:</strong> Re-engagement — a strong reason to come back now</li>
+      </ul>
+      <div class="article-callout article-callout--green"><strong>📈 Real result:</strong> One Almond Growth client went from a 14% repeat purchase rate to a 61% repeat purchase rate in 90 days — using a post-purchase WhatsApp sequence just like the one above. Same product. Same price. Just a system.</div>
+      <div class="article-cta">
+        <h3>Do your customers come back after the first purchase?</h3>
+        <p>If you are not sure — or you know they don't — let us build the system that changes that.</p>
+        <a href="index.html#signup" class="btn btn--primary">Book My Free Audit →</a>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ===== ARTICLE 4 ===== -->
+<div class="article-overlay" id="article4">
+  <div class="article-modal">
+    <button class="article-close" onclick="closeArticle('article4')">✕ Close</button>
+    <div class="article-content">
+      <div class="article-meta"><span class="art-tag art-tag--whatsapp">WhatsApp Marketing</span><span class="art-date">May 2026 · 7 min read</span></div>
+      <h1>How WhatsApp Marketing Helps Nigerian Businesses Grow — The Most Underused Growth Tool in Africa</h1>
+      <p class="article-intro">While most businesses are burning money on ads that nobody clicks, smart Nigerian business owners are quietly using WhatsApp to keep customers engaged, coming back, and referring friends. Here is why WhatsApp is not just a messaging app — it is your most powerful marketing channel.</p>
+      <h2>The Channel Your Customers Already Live On</h2>
+      <p>Nigeria has over 90 million WhatsApp users. It is where Nigerians communicate with family, friends, colleagues — and increasingly, the businesses they trust. The open rate for WhatsApp messages is above 90%. Email marketing? 20% on a good day. Instagram? Under 5% organic reach. When a business sends a WhatsApp message that feels human and relevant, it does not feel like an ad — it feels like a conversation. And conversations build loyalty.</p>
+      <div class="article-callout"><strong>📊 The numbers:</strong> WhatsApp messages have an open rate of 90–98%. Compare that to the average Nigerian email open rate of 15–25%. For small businesses with limited marketing budgets, WhatsApp is not an option — it is a necessity.</div>
+      <h2>How WhatsApp Marketing Works for Small Businesses</h2>
+      <h3>1. Post-Purchase Follow-Up Sequences</h3>
+      <p>The moment a customer buys from you, the WhatsApp journey begins. A sequence starting with a warm thank-you, followed by a tips message, a check-in, and a return offer keeps your brand warm in the customer's mind long after the purchase. This sequence runs automatically — you set it up once, and it works while you sleep.</p>
+      <h3>2. Broadcast Campaigns That Feel Personal</h3>
+      <p>WhatsApp Broadcast lets you send a message to hundreds of customers simultaneously — but each person receives it as a direct, personal message. Not a group chat. This is the closest thing to personalised mass communication that exists. A good broadcast campaign can drive a surge of repeat orders in 24 hours without spending a single naira on ads.</p>
+      <h3>3. Win-Back Campaigns for Silent Customers</h3>
+      <p>Every business has customers who bought once and went quiet. A message like: "Hey [Name], it's been a while! We've got something special waiting for you — exclusively for our returning customers 🎁" can recover customers you thought were lost forever.</p>
+      <h3>4. Loyalty and Reward Messaging</h3>
+      <p>A message that says "You've now made 5 purchases with us — here's a thank-you gift!" creates an emotional connection that no Instagram post ever could. It is personal. It is specific to that customer. And it turns buyers into brand ambassadors.</p>
+      <h3>5. Flash Sales and Time-Limited Offers</h3>
+      <p>Need to drive revenue quickly? A WhatsApp broadcast with a 24-hour flash offer to your existing customer list is the fastest, cheapest, and most effective way to generate sales. No ad spend. No algorithm. Just direct access to people who already trust you.</p>
+      <h2>The Mistakes That Kill WhatsApp Marketing</h2>
+      <ul class="article-list">
+        <li>Broadcasting too frequently — more than 2–3 times per week without value feels like spam</li>
+        <li>Generic, impersonal messages — "Dear customer" is the fastest way to get blocked</li>
+        <li>Sending only when you want money — customers notice when every message is "buy this"</li>
+        <li>No clear call to action — every message should tell the customer exactly what to do next</li>
+        <li>Ignoring replies — if customers respond and get silence, they never respond again</li>
+      </ul>
+      <div class="article-callout article-callout--green"><strong>💬 WhatsApp is not the future of Nigerian business marketing. It is the present.</strong> The businesses that install proper WhatsApp retention systems now will have an enormous advantage over those that figure it out in two years.</div>
+      <div class="article-cta">
+        <h3>Want a WhatsApp marketing system built for your business?</h3>
+        <p>Book a free Retention Audit and we will map out exactly how WhatsApp can drive repeat revenue for your specific business.</p>
+        <a href="index.html#signup" class="btn btn--primary">Book My Free Audit →</a>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ===== ARTICLE 5 ===== -->
+<div class="article-overlay" id="article5">
+  <div class="article-modal">
+    <button class="article-close" onclick="closeArticle('article5')">✕ Close</button>
+    <div class="article-content">
+      <div class="article-meta"><span class="art-tag art-tag--funnel">Sales Funnels</span><span class="art-date">May 2026 · 8 min read</span></div>
+      <h1>5 Funnel Mistakes Killing Small Business Sales — Is Your Business Making All of Them?</h1>
+      <p class="article-intro">Your funnel is supposed to take a stranger and turn them into a paying, loyal customer. But most small business funnels are broken in ways the owner doesn't even know about — leaking revenue at every stage. Let us walk through the 5 most common and most damaging funnel mistakes in small business today.</p>
+      <h2>First — What Is a Sales Funnel, Really?</h2>
+      <p>A sales funnel is the journey a customer takes from first hearing about your business to becoming a loyal repeat buyer. Most people think of three stages: Awareness, Consideration, Purchase. But a complete funnel has a fourth stage most small businesses completely ignore: <strong>Retention</strong>. That fourth stage is where the real money is — and where most funnels fall apart.</p>
+      <h2>Mistake #1: The Funnel Ends at the Sale</h2>
+      <p>This is the most expensive mistake in small business. The business works hard to attract a customer, converts the sale — and then treats the journey as complete. No follow-up. No post-purchase engagement. No pathway back. Every customer who buys and is never followed up with is a missed opportunity worth multiples of that first sale.</p>
+      <p><strong>The fix:</strong> Build a post-purchase sequence that begins the moment the sale is made. Thank them. Check in. Offer value. Invite them back.</p>
+      <h2>Mistake #2: Driving Cold Traffic to a Broken Experience</h2>
+      <p>Many small businesses spend heavily on ads but send visitors to a confusing website, a WhatsApp number with no greeting, or a social page that hasn't been updated in weeks. Before you spend a naira on ads, walk through your own customer journey. Message your own WhatsApp business number. Visit your own website. You will almost certainly find friction you never knew existed.</p>
+      <p><strong>The fix:</strong> Audit your customer touchpoints before scaling paid traffic. Fix the leaks before turning on the tap.</p>
+      <h2>Mistake #3: No Lead Nurturing Between Awareness and Purchase</h2>
+      <p>Most customers do not buy on first contact. They need to see you, hear from you, trust you — multiple times before they commit. But most small business funnels go straight from "see our ad" to "buy now" with nothing in between. Potential customers fall off — not because they were not a good fit, but because no system existed to stay in touch until they were ready.</p>
+      <p><strong>The fix:</strong> Build a nurturing sequence of WhatsApp messages or content that educates and builds trust with prospects who are not yet ready to buy.</p>
+      <h2>Mistake #4: Treating All Customers the Same</h2>
+      <p>A customer who bought three times in the last six months is not the same as one who bought once nine months ago. Yet most small businesses send the same broadcast, the same offer, the same message to every person in their database. This kills relevance. And irrelevant marketing is ignored.</p>
+      <p><strong>The fix:</strong> Segment your customers. Create different messaging for new buyers, returning buyers, high-value customers, and dormant customers. CRM systems make this automatic.</p>
+      <h2>Mistake #5: No Measurement — Flying Blind</h2>
+      <p>You cannot fix what you cannot see. Yet most small businesses have no idea what their funnel conversion rates are. How many people enquire but do not buy? How many buy once but do not return? Without answers to these questions, you are guessing — and guessing is expensive.</p>
+      <p><strong>The fix:</strong> Track the key metrics at each funnel stage. Even basic tracking — "How did you hear about us?" — gives you actionable data. A CRM makes this systematic.</p>
+      <div class="article-callout"><strong>🔍 Quick self-audit:</strong> How many of these 5 mistakes is your business making right now? If it is more than two, your funnel is actively working against your growth — and the fix is closer than you think.</div>
+      <h2>The Common Thread Through All 5 Mistakes</h2>
+      <p>Every single mistake has the same root cause: <strong>the business was built for transactions, not relationships.</strong> A transactional business acquires customers. A relationship business retains them. The latter is 5–7 times more profitable. Fixing these funnel mistakes is about building the right systems — not spending more on marketing.</p>
+      <div class="article-cta">
+        <h3>How many funnel leaks does your business have?</h3>
+        <p>Book a free Retention Audit and we will map your complete customer journey — and show you exactly where and how to fix it.</p>
+        <a href="index.html#signup" class="btn btn--primary">Book My Free Audit →</a>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ===== ARTICLE 6 ===== -->
+<div class="article-overlay" id="article6">
+  <div class="article-modal">
+    <button class="article-close" onclick="closeArticle('article6')">✕ Close</button>
+    <div class="article-content">
+      <div class="article-meta"><span class="art-tag art-tag--digital">Digital Marketing</span><span class="art-date">May 2026 · 9 min read</span></div>
+      <h1>Why Most Small Businesses Fail at Digital Marketing — And the Costly Mistake They Keep Repeating</h1>
+      <p class="article-intro">Digital marketing looks simple from the outside. Post on Instagram. Run some ads. Grow your business. But the graveyard of small businesses that tried this formula and failed is enormous. Here is the honest truth about why — and what actually works.</p>
+      <h2>The Promise vs. The Reality</h2>
+      <p>Social media and digital advertising promised small businesses the ability to compete with big companies without a big budget. But somewhere between the promise and the execution, most small businesses get lost — spending money, creating content, running campaigns — and seeing little to no lasting return. Not because digital marketing doesn't work. Because most small businesses are using it wrong.</p>
+      <h2>The 6 Core Reasons Small Businesses Fail at Digital Marketing</h2>
+      <h3>1. Confusing Activity With Strategy</h3>
+      <p>Posting on Instagram every day feels like marketing. Boosting a Facebook post feels like advertising. But activity without strategy is just noise. The question is not "are we doing digital marketing?" — it is "what is our system designed to achieve, and how does each action contribute to that?" Most small businesses have activities. Very few have a strategy.</p>
+      <h3>2. Chasing New Customers While Ignoring Existing Ones</h3>
+      <p>The entire digital marketing machine is pointed at one goal: acquisition. Getting new customers in the door. But the moment they walk through that door, the machine turns off. No system to retain them. Digital marketing becomes a cost, not an investment, because it never compounds. The business has to keep running just to stay in the same place.</p>
+      <h3>3. No Understanding of the Customer Journey</h3>
+      <p>Most small businesses run digital marketing without ever mapping where their customer actually comes from, what makes them buy, and what makes them leave. They create content for an imaginary customer. The most powerful marketing insight any small business owner can have is a deep, empathetic understanding of their customer's actual journey.</p>
+      <h3>4. Spending on Traffic Before Fixing Conversion</h3>
+      <p>Traffic without conversion is just a vanity metric. Thousands of website visitors who do not enquire. Hundreds of enquiries that do not close. Many small businesses respond to poor results by spending more on traffic — when the real problem is that the conversion at each stage of the funnel is broken. Fix the conversion rate first. Then pour traffic into a system that actually converts it into revenue.</p>
+      <h3>5. Inconsistency Driven by Inspiration, Not Systems</h3>
+      <p>Most small businesses run their digital marketing on inspiration — posting when they feel like it, following up when they remember. Inspiration is inconsistent. Inconsistency destroys marketing momentum. When your marketing runs on systems rather than feelings, it becomes consistent — and consistency is the secret to digital marketing growth.</p>
+      <h3>6. Measuring the Wrong Things</h3>
+      <p>Likes. Followers. Reach. Impressions. These are the metrics most small businesses watch. They are also almost entirely useless. The metrics that matter are: How many enquiries did this generate? How many converted to sales? What is the ROI? When you stop measuring vanity metrics and start measuring business metrics, your strategy changes completely.</p>
+      <div class="article-callout"><strong>💡 The hard truth:</strong> Most small businesses are not failing at digital marketing because digital marketing doesn't work. They are failing because they are using it purely for acquisition — when its most powerful application for small businesses is retention.</div>
+      <h2>The Shift That Changes Everything</h2>
+      <p>The businesses that see the most dramatic results make one fundamental shift: they stop using digital marketing purely to get new customers and start using it to keep the ones they have. WhatsApp sequences that re-engage dormant customers. Lifecycle campaigns that guide new buyers into loyal ones. CRM-driven messaging that speaks to each customer segment at exactly the right time.</p>
+      <h2>What Good Digital Marketing for a Small Business Actually Looks Like</h2>
+      <ul class="article-list">
+        <li>A clearly defined customer journey from first contact to loyal repeat buyer</li>
+        <li>Acquisition channels feeding into a retention system</li>
+        <li>Automated WhatsApp sequences that engage customers at every stage</li>
+        <li>A CRM that segments customers and delivers personalised messaging</li>
+        <li>Clear metrics: repeat purchase rate, customer lifetime value, retention rate, campaign ROI</li>
+        <li>Consistent content that builds trust, not just awareness</li>
+        <li>A strategy — not just activities</li>
+      </ul>
+      <div class="article-callout article-callout--green"><strong>📈 The compound effect of retention marketing:</strong> When a customer buys twice, their lifetime value doubles. When they buy three times, research shows they are 54% more likely to continue buying indefinitely. The most powerful digital marketing strategy for a small business is turning first-time buyers into third-time buyers. Everything else follows.</div>
+      <div class="article-cta">
+        <h3>Is your digital marketing generating real, repeatable revenue?</h3>
+        <p>Book a free Retention Audit. We will analyse your current digital marketing system and show you exactly how to fix it.</p>
+        <a href="index.html#signup" class="btn btn--primary">Book My Free Audit →</a>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- FOOTER -->
+<footer class="footer">
+  <div class="container footer__inner">
+    <div class="footer__brand">
+      <a href="index.html" class="nav__logo">
+        <span class="logo-mark">A</span>
+        <span class="logo-text">Almond<strong>Growth</strong></span>
+      </a>
+      <p>CRM & Customer Retention Growth Company.<br/>Helping small businesses stop losing customers.</p>
+    </div>
+    <div class="footer__links">
+      <div class="footer__col">
+        <h4>Navigate</h4>
+        <a href="index.html#problem">The Problem</a>
+        <a href="index.html#solution">What We Do</a>
+        <a href="index.html#process">How It Works</a>
+        <a href="index.html#signup">Get Started</a>
+      </div>
+      <div class="footer__col">
+        <h4>Blog</h4>
+        <a href="blog.html">All Articles</a>
+        <a href="#" onclick="showArticle('article1');return false;">Customer Retention</a>
+        <a href="#" onclick="showArticle('article2');return false;">CRM Systems</a>
+        <a href="#" onclick="showArticle('article4');return false;">WhatsApp Marketing</a>
+      </div>
+      <div class="footer__col">
+        <h4>Legal</h4>
+        <a href="sitemap.html">Sitemap</a>
+        <a href="privacy.html">Privacy Policy</a>
+        <a href="terms.html">Terms of Service</a>
+      </div>
+    </div>
+  </div>
+  <div class="footer__bottom">
+    <p>© 2026 Almond Growth — All rights reserved. | Nigeria</p>
+  </div>
 </footer>
 
+<script>
+// ===== NAVBAR =====
+const nav = document.getElementById('nav');
+window.addEventListener('scroll', () => nav.classList.toggle('nav--scrolled', window.scrollY > 40));
+document.getElementById('burger').addEventListener('click', () => {
+  document.getElementById('mobileMenu').classList.toggle('open');
+});
+
+// ===== ARTICLE MODALS =====
+function showArticle(id) {
+  const el = document.getElementById(id);
+  if (!el) return;
+  el.style.display = 'flex';
+  el.classList.add('open');
+  document.body.style.overflow = 'hidden';
+  el.scrollTop = 0;
+}
+
+function closeArticle(id) {
+  const el = document.getElementById(id);
+  if (!el) return;
+  el.classList.remove('open');
+  el.style.display = 'none';
+  document.body.style.overflow = '';
+}
+
+// Close on backdrop click
+document.querySelectorAll('.article-overlay').forEach(o => {
+  o.addEventListener('click', e => {
+    if (e.target === o) closeArticle(o.id);
+  });
+});
+
+// Close on Escape
+document.addEventListener('keydown', e => {
+  if (e.key === 'Escape') {
+    document.querySelectorAll('.article-overlay').forEach(o => closeArticle(o.id));
+  }
+});
+
+// ===== CATEGORY FILTER =====
+document.querySelectorAll('.tag-btn').forEach(btn => {
+  btn.addEventListener('click', () => {
+    document.querySelectorAll('.tag-btn').forEach(b => b.classList.remove('active'));
+    btn.classList.add('active');
+    const filter = btn.dataset.filter;
+
+    // Filter cards
+    document.querySelectorAll('.blog-card').forEach(card => {
+      card.classList.toggle('hidden', filter !== 'all' && card.dataset.category !== filter);
+    });
+
+    // Featured section
+    const featured = document.querySelector('.featured-card');
+    const featuredSection = document.getElementById('featuredSection');
+    if (featured && featuredSection) {
+      const show = filter === 'all' || featured.dataset.category === filter;
+      featuredSection.style.display = show ? '' : 'none';
+    }
+  });
+});
+
+// ===== REVEAL ANIMATION =====
+const observer = new IntersectionObserver(entries => {
+  entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('visible'); observer.unobserve(e.target); }});
+}, { threshold: 0.1 });
+document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+</script>
 </body>
 </html>
