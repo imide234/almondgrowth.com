@@ -4,29 +4,30 @@
 
 // --- Navbar scroll effect ---
 const nav = document.getElementById('nav');
-window.addEventListener('scroll', () => {
-  nav.classList.toggle('nav--scrolled', window.scrollY > 40);
-});
+if (nav) {
+  window.addEventListener('scroll', () => {
+    nav.classList.toggle('nav--scrolled', window.scrollY > 40);
+  });
+}
 
 // --- Mobile menu ---
 const burger = document.getElementById('burger');
 const mobileMenu = document.getElementById('mobileMenu');
 
-burger.addEventListener('click', () => {
-  mobileMenu.classList.toggle('open');
-});
-
-// Close mobile menu on link click
-mobileMenu.querySelectorAll('a').forEach(link => {
-  link.addEventListener('click', () => mobileMenu.classList.remove('open'));
-});
+if (burger && mobileMenu) {
+  burger.addEventListener('click', () => {
+    mobileMenu.classList.toggle('open');
+  });
+  mobileMenu.querySelectorAll('a').forEach(link => {
+    link.addEventListener('click', () => mobileMenu.classList.remove('open'));
+  });
+}
 
 // --- Counter animation ---
 function animateCounter(el) {
   const target = parseInt(el.dataset.target, 10);
   const duration = 1800;
   const start = performance.now();
-
   function update(now) {
     const elapsed = now - start;
     const progress = Math.min(elapsed / duration, 1);
@@ -34,7 +35,6 @@ function animateCounter(el) {
     el.textContent = Math.round(eased * target);
     if (progress < 1) requestAnimationFrame(update);
   }
-
   requestAnimationFrame(update);
 }
 
@@ -76,8 +76,6 @@ const submitBtn    = document.getElementById('submitBtn');
 if (form) {
   form.addEventListener('submit', async (e) => {
     e.preventDefault();
-
-    // ---- Client-side validation ----
     const name     = document.getElementById('fname').value.trim();
     const email    = document.getElementById('femail').value.trim();
     const industry = document.getElementById('findustry').value;
@@ -87,16 +85,12 @@ if (form) {
       return;
     }
 
-    // Mirror email into the hidden _replyto field so Formspree
-    // sets the reply-to address correctly in your inbox
     const replyField = document.getElementById('replytoField');
     if (replyField) replyField.value = email;
 
-    // ---- Loading state ----
     submitBtn.disabled = true;
     submitBtn.textContent = 'Sending your request…';
 
-    // ---- Send to Formspree ----
     try {
       const response = await fetch(form.action, {
         method: 'POST',
@@ -105,7 +99,6 @@ if (form) {
       });
 
       if (response.ok) {
-        // SUCCESS — show thank-you message
         form.hidden = true;
         if (errorBlock) errorBlock.hidden = true;
         successBlock.hidden = false;
@@ -115,7 +108,6 @@ if (form) {
         throw new Error('Formspree returned an error');
       }
     } catch (err) {
-      // ERROR — show error message, re-enable button
       submitBtn.disabled = false;
       submitBtn.textContent = 'Book My Free Retention Audit →';
       if (errorBlock) {
@@ -125,6 +117,25 @@ if (form) {
       console.error('Form submission error:', err);
     }
   });
+}
+
+// --- Investor form submission (investors.html) ---
+function submitInvestorForm() {
+  const name = document.getElementById('inv-name');
+  const email = document.getElementById('inv-email');
+  const type = document.getElementById('inv-type');
+  if (!name || !email || !type) return;
+
+  if (!name.value.trim() || !email.value.trim() || !type.value) {
+    alert('Please fill in your name, email, and partnership type.');
+    return;
+  }
+  const formEl = document.querySelector('.inv-form');
+  const noteEl = document.querySelector('.inv-form-wrap > p');
+  const successEl = document.getElementById('inv-success');
+  if (formEl) formEl.style.display = 'none';
+  if (noteEl) noteEl.style.display = 'none';
+  if (successEl) successEl.hidden = false;
 }
 
 // --- Smooth active nav link highlighting ---
@@ -138,7 +149,7 @@ const sectionObserver = new IntersectionObserver((entries) => {
         link.style.color = '';
         link.style.fontWeight = '';
         if (link.getAttribute('href') === '#' + entry.target.id) {
-          link.style.color = 'var(--almond)';
+          link.style.color = 'var(--green-bright)';
           link.style.fontWeight = '600';
         }
       });
